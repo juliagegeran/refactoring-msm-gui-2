@@ -12,6 +12,8 @@
 #
 class Director < ApplicationRecord
   validates(:name, presence: true)
+  has_many(:movie)
+  
 
   def filmography
     key = self.id
